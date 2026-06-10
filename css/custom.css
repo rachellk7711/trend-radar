@@ -1,0 +1,467 @@
+/* custom.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Tabler Theme Variable Overrides */
+  --tblr-font-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+  
+  /* Brand Theme: Bright Turquoise Base */
+  --tblr-primary: #0df0e5; 
+  --tblr-primary-rgb: 13, 240, 229;
+  --tblr-primary-hover: #0bcbc2;
+  
+  /* Neon Purple (Brand Accents) */
+  --color-neon-purple: #bd00ff;
+  --color-neon-purple-rgb: 189, 0, 255;
+  
+  /* Point Color: Neon Pink */
+  --color-neon-pink: #ff2a85;
+  --color-neon-pink-rgb: 255, 42, 133;
+  --color-neon-pink-hover: #ff007f;
+  
+  /* Gradients */
+  --gradient-cyan: linear-gradient(135deg, #0df0e5 0%, #4facfe 100%);
+  --gradient-pink: linear-gradient(135deg, #ff2a85 0%, #bd00ff 100%);
+  --gradient-pink-hover: linear-gradient(135deg, #ff007f 0%, #9900ff 100%);
+  --gradient-neon: linear-gradient(135deg, #0df0e5 0%, #9b51e0 100%);
+  
+  --tblr-border-radius: 12px;
+}
+
+/* Force dark mode styles on body and cards */
+body {
+  font-family: var(--tblr-font-sans-serif);
+  background-color: #0b0f19 !important; /* Deep dark space color */
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Navigation */
+.navbar {
+  position: relative !important;
+  z-index: 9999 !important; /* 최상위 레이어 보장 */
+  box-shadow: 0 4px 20px 0 rgba(0, 242, 254, 0.05);
+  background-color: rgba(15, 23, 42, 0.8) !important; /* Semi-transparent dark */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 242, 254, 0.15) !important;
+}
+
+.brand-text {
+  font-weight: 800;
+  background: var(--gradient-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+}
+
+.brand-icon {
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.8);
+  color: var(--tblr-primary);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem !important;
+  margin: 0 0.25rem;
+}
+
+.nav-link:hover {
+  color: var(--tblr-primary) !important;
+  background-color: rgba(0, 242, 254, 0.1);
+  text-shadow: 0 0 5px rgba(0, 242, 254, 0.4);
+}
+
+.nav-item.active .nav-link {
+  color: var(--tblr-primary) !important;
+  background-color: rgba(0, 242, 254, 0.15);
+  font-weight: 600;
+  border: 1px solid rgba(0, 242, 254, 0.3) !important;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.1);
+}
+
+/* Action Buttons (Neon Pink Point Color) */
+.btn-primary, #btn-collect-ai, #btn-collect-global, #btn-collect-finance {
+  background: var(--gradient-pink) !important;
+  color: #ffffff !important; /* White text for neon background contrast */
+  font-weight: 600;
+  border: none !important;
+  box-shadow: 0 0 10px rgba(255, 42, 133, 0.4), 0 4px 15px rgba(255, 42, 133, 0.2) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover, #btn-collect-ai:hover, #btn-collect-global:hover, #btn-collect-finance:hover {
+  background: var(--gradient-pink-hover) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(255, 42, 133, 0.7), 0 6px 20px rgba(255, 42, 133, 0.3) !important;
+}
+
+/* Outline Buttons (Neon Cyan Brand Color) */
+.btn-outline-primary {
+  border-color: rgba(0, 242, 254, 0.6) !important;
+  color: #00f2fe !important;
+  background: rgba(0, 242, 254, 0.05) !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 5px rgba(0, 242, 254, 0.1);
+}
+
+.btn-outline-primary:hover {
+  background-color: #00f2fe !important;
+  border-color: #00f2fe !important;
+  color: #0b0f19 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+}
+
+/* User profile button */
+.user-profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(30, 41, 59, 0.6);
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.user-profile-btn:hover {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(0, 242, 254, 0.5);
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.2);
+  cursor: pointer;
+}
+
+/* Card Styling */
+.card {
+  background-color: #111827 !important; /* Dark Slate card background */
+  border: 1px solid rgba(0, 242, 254, 0.1) !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(0, 242, 254, 0.3) !important;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.08), 0 8px 16px -4px rgba(0, 0, 0, 0.3);
+}
+
+/* Scrap Pin Icon (Neon Pink Point Color) */
+.icon-scrap-pin {
+  color: #94a3b8; /* Default color (unscrapped) */
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.icon-scrap-pin.active {
+  color: var(--tblr-primary) !important;
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.8) !important;
+}
+
+.btn-scrap-repo:hover .icon-scrap-pin {
+  color: var(--color-neon-pink) !important;
+  text-shadow: 0 0 8px rgba(255, 42, 133, 0.8);
+}
+
+.btn-scrap-repo {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  padding: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-scrap-repo:hover {
+  background: rgba(255, 42, 133, 0.1);
+  border-color: rgba(255, 42, 133, 0.4);
+}
+
+/* Pocket count notification badge (Neon Pink Point Color) */
+#pocket-count {
+  background-color: rgba(255, 42, 133, 0.2) !important;
+  color: #ff5e9f !important;
+  border: 1px solid rgba(255, 42, 133, 0.5) !important;
+  box-shadow: 0 0 10px rgba(255, 42, 133, 0.3);
+}
+
+/* Category Badges & Tags */
+.badge {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border-radius: 6px;
+  padding: 0.35em 0.6em;
+}
+
+.bg-indigo {
+  background-color: rgba(99, 102, 241, 0.2) !important;
+  color: #a5b4fc !important;
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.15);
+}
+
+.bg-primary {
+  background-color: rgba(0, 242, 254, 0.15) !important;
+  color: #22d3ee !important;
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.15);
+}
+
+.bg-green {
+  background-color: rgba(52, 211, 153, 0.15) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.15);
+}
+
+/* Offcanvas Drawer */
+.offcanvas {
+  background-color: #0b0f19 !important;
+  color: #f8fafc !important;
+  border-left: 1px solid rgba(0, 242, 254, 0.2) !important;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid rgba(0, 242, 254, 0.1) !important;
+}
+
+.offcanvas-body {
+  background-color: #0b0f19 !important;
+}
+
+.offcanvas-body .card {
+  background-color: #111827 !important;
+}
+
+/* Footer styling */
+footer {
+  background-color: #0b0f19;
+  border-top: 1px solid rgba(0, 242, 254, 0.1);
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+
+/* Main Content Layout */
+.page-wrapper {
+  flex: 1;
+  padding: 3.5rem 0 2.5rem 0 !important;
+}
+
+/* Text Overrides */
+.text-dark {
+  color: #f8fafc !important;
+}
+
+.text-muted, .text-secondary {
+  color: #94a3b8 !important;
+}
+
+/* Rank Badge (Neon Cyan brand style) */
+.badge-rank {
+  background-color: rgba(0, 242, 254, 0.15) !important;
+  color: #22d3ee !important;
+  border: 1px solid rgba(0, 242, 254, 0.4) !important;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.2);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25em 0.5em !important;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulseGlow {
+  0% { text-shadow: 0 0 8px rgba(0, 242, 254, 0.5); }
+  50% { text-shadow: 0 0 15px rgba(0, 242, 254, 0.9), 0 0 25px rgba(0, 242, 254, 0.4); }
+  100% { text-shadow: 0 0 8px rgba(0, 242, 254, 0.5); }
+}
+
+.animate-pulse {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Toast Neon Pink Style */
+.toast-neon-pink {
+  background-color: #111827 !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 42, 133, 0.5) !important;
+  box-shadow: 0 0 15px rgba(255, 42, 133, 0.3) !important;
+  border-radius: 8px;
+}
+
+/* Toast container and show animation */
+.toast-container {
+  z-index: 1060 !important;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.toast.show {
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Memo Input styling */
+.memo-input {
+  background-color: #0b0f19 !important;
+  border: 1px solid rgba(0, 242, 254, 0.15) !important;
+  color: #f8fafc !important;
+  transition: all 0.2s ease;
+}
+
+.memo-input:focus {
+  background-color: #0b0f19 !important;
+  border-color: var(--tblr-primary) !important;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.25) !important;
+  color: #f8fafc !important;
+}
+
+.memo-input::placeholder {
+  color: #64748b !important;
+  opacity: 0.7;
+}
+
+/* Toast Neon Cyan Style */
+.toast-neon-cyan {
+  background-color: #111827 !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(0, 242, 254, 0.5) !important;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3) !important;
+  border-radius: 8px;
+}
+
+/* Neon Cyan Save Button */
+.btn-save-memo {
+  background: var(--gradient-cyan) !important;
+  color: #0b0f19 !important; /* Dark text for contrast */
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.4), 0 4px 15px rgba(0, 242, 254, 0.2) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.btn-save-memo:hover {
+  background: var(--tblr-primary-hover) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.7), 0 6px 20px rgba(0, 242, 254, 0.3) !important;
+}
+
+/* 헤더 프로필 영역 및 드롭다운 무조건 최상위 클릭 노출 */
+#auth-area,
+#auth-area .dropdown,
+#auth-area .dropdown-menu {
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+}
+
+/* Premium Dropdown Menu Styling */
+.dropdown-menu {
+  background-color: #111827 !important; /* Matches card background */
+  border: 1px solid rgba(0, 242, 254, 0.2) !important;
+  box-shadow: 0 10px 25px rgba(0, 242, 254, 0.15) !important;
+  border-radius: 8px !important;
+  z-index: 99999 !important; /* 무조건 최상단 */
+}
+
+.dropdown-item {
+  color: #94a3b8 !important;
+  transition: all 0.2s ease;
+  pointer-events: auto !important;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 242, 254, 0.1) !important;
+  color: #00f2fe !important;
+}
+
+.dropdown-header {
+  color: #64748b !important;
+  font-weight: 700;
+}
+
+.dropdown-divider {
+  border-top: 1px solid rgba(0, 242, 254, 0.1) !important;
+}
+
+/* =====================================================
+   AI 친절한 해설 버튼 스타일
+   ===================================================== */
+.btn-ai-explain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--tblr-font-sans-serif);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #D4A373 0%, #C08B5C 100%);
+  color: #1a1a2e;
+  transition: all 0.22s ease;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 8px rgba(212, 163, 115, 0.2);
+}
+
+.btn-ai-explain:hover {
+  background: linear-gradient(135deg, #D9B68A 0%, #D4A373 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(212, 163, 115, 0.35);
+  color: #1a1a2e;
+}
+
+.btn-ai-explain:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(212, 163, 115, 0.25);
+}
+
+/* AI 해설 모달 아이콘 펄스 애니메이션 */
+.ai-explain-icon-wrap {
+  width: 44px;
+  height: 44px;
+  background: rgba(245, 158, 11, 0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  animation: ai-icon-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes ai-icon-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.25); }
+  50%       { box-shadow: 0 0 0 8px rgba(245, 158, 11, 0); }
+}
+
+/* 모달 해설 텍스트 페이드인 */
+#modal-explain-content {
+  animation: fadeIn 0.4s ease forwards;
+}
+
