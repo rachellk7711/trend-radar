@@ -465,3 +465,34 @@ footer {
   animation: fadeIn 0.4s ease forwards;
 }
 
+/* Google Sign-In Button (Official style matching dark mode integration) */
+.btn-google-signin {
+  background-color: #FFFFFF !important;
+  color: #3C4043 !important;
+  font-weight: 600 !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 242, 254, 0.04) !important;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.btn-google-signin:hover {
+  background-color: #F8F9FA !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 242, 254, 0.12) !important;
+}
+
+.btn-google-signin:active {
+  background-color: #F1F5F9 !important;
+  transform: translateY(0) !important;
+}
+
+/* Ensure SVG alignment inside signin button */
+.btn-google-signin svg {
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
