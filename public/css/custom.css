@@ -166,8 +166,8 @@ body {
 }
 
 .btn-scrap-repo:hover .icon-scrap-pin {
-  color: var(--color-neon-pink) !important;
-  text-shadow: 0 0 8px rgba(255, 42, 133, 0.8);
+  color: #D4A373 !important;
+  text-shadow: 0 0 8px rgba(212, 163, 115, 0.6);
 }
 
 .btn-scrap-repo {
@@ -179,16 +179,16 @@ body {
 }
 
 .btn-scrap-repo:hover {
-  background: rgba(255, 42, 133, 0.1);
-  border-color: rgba(255, 42, 133, 0.4);
+  background: rgba(212, 163, 115, 0.1);
+  border-color: rgba(212, 163, 115, 0.35);
 }
 
 /* Pocket count notification badge (Neon Pink Point Color) */
 #pocket-count {
-  background-color: rgba(255, 42, 133, 0.2) !important;
-  color: #ff5e9f !important;
-  border: 1px solid rgba(255, 42, 133, 0.5) !important;
-  box-shadow: 0 0 10px rgba(255, 42, 133, 0.3);
+  background-color: rgba(212, 163, 115, 0.15) !important;
+  color: #D4A373 !important;
+  border: 1px solid rgba(212, 163, 115, 0.4) !important;
+  box-shadow: 0 0 10px rgba(212, 163, 115, 0.2);
 }
 
 /* Category Badges & Tags */
@@ -297,12 +297,12 @@ footer {
   animation: pulseGlow 2.5s infinite ease-in-out;
 }
 
-/* Toast Neon Pink Style */
+/* Toast Neon Gold Style */
 .toast-neon-pink {
   background-color: #111827 !important;
   color: #f8fafc !important;
-  border: 1px solid rgba(255, 42, 133, 0.5) !important;
-  box-shadow: 0 0 15px rgba(255, 42, 133, 0.3) !important;
+  border: 1px solid rgba(212, 163, 115, 0.4) !important;
+  box-shadow: 0 0 15px rgba(212, 163, 115, 0.2) !important;
   border-radius: 8px;
 }
 
